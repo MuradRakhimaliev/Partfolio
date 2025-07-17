@@ -1,0 +1,17 @@
+@media (max-width:450px) {
+    .project{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .project__link{
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        border-radius: 5px;
+        height: 30px;
+        padding: 0 5px;
+        background: #1e293b;
+    }
+}

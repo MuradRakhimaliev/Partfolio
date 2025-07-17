@@ -35,6 +35,21 @@ section{
   margin-bottom: 1rem;
   border-left: 5px solid #38bdf8;
   padding-left: 1rem;
+  animation: init infinite 5s linear;
+}
+@keyframes init {
+    25%{
+        transform: translateX(5px);
+    }
+    50%{
+        transform: translateX(0px);
+    }
+    75%{
+        transform: translateX(5px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
 }
 .about__text{
     font-size: 1rem;
@@ -51,16 +66,7 @@ section{
   padding: 0.5rem 1rem;
   border-radius: 5px;
 }
-.projects .project {
-  background: #1e293b;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 10px;
-}
-.projects .project h3 {
-  margin-bottom: 0.5rem;
-    transition: 1s;
-}
+
 .contact a {
   color: #38bdf8;
   text-decoration: none;
@@ -72,39 +78,104 @@ footer {
   color: #64748b;
   font-size: 0.9rem;
 }
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 1.5rem;
-  }
-  h2 {
-    font-size: 1.25rem;
-  }
-}
+
 .project{
     display: flex;
     justify-content: start;
     align-items: center;
-    gap: 30px;
+    gap: 10px;
 }
 .project__link{
     font-size: 16px;
     font-weight: 400;
     color: #38bdf8;
     text-decoration: none;
-    transition: 1s;
+    transition: 3s;
+    margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        border-radius: 5px;
+        height: 30px;
+        padding: 0 5px;
+        background: #1e293b;
 
 }
 .project__link:hover{
     color: #f3fbff;
-    border-bottom: 2px solid #f3fbff;
+    border: 2px solid #f3fbff;
 }
 .contact__link:hover{
     color: #f3fbff;
     border-bottom: 2px solid #f3fbff;
 }
-.skillss:hover{
-    transform: scale(1.1);
-}
+
 .skillss{
     transition: 1s;
+}
+.skillss:nth-of-type(1){
+  animation: skill infinite 7s linear;
+}
+.skillss:nth-of-type(3){
+  animation: skill infinite 7s linear;
+}
+.skillss:nth-of-type(5){
+  animation: skill infinite 7s linear;
+}
+.skillss:nth-of-type(2){
+  animation: skill2 infinite 7s linear;
+}
+.skillss:nth-of-type(4){
+  animation: skill2 infinite 7s linear;
+}
+@keyframes skill {
+    20%{
+        transform: translateY(5px);
+    }
+    40%{
+        transform: translateY(-5px);
+    }
+    60%{
+        transform: translateY(5px);
+    }
+    80%{
+        transform: translateY(-5px);
+    }
+    100%{
+      transform: translateY(0);
+    }
+}
+@keyframes skill2 {
+    20%{
+        transform: translateY(-5px);
+    }
+    40%{
+        transform: translateY(5px);
+    }
+    60%{
+        transform: translateY(-5px);
+    }
+    80%{
+        transform: translateY(5px);
+    }
+    100%{
+      transform: translateY(0);
+    }
+}
+.lang{
+  font-size: 20px;
+  font-weight: 700;
+  color: #94a3b8;
+}
+.RU-Flag{
+  width: 30px;
+  height: 30px;  
+}
+.lang__box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  
 }
